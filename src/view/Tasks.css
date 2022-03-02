@@ -1,0 +1,90 @@
+.container {
+    box-sizing: border-box;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    position:relative;
+}
+
+.taskInput {
+    width:50%;
+    margin-top:1em;
+    box-sizing: border-box;
+    padding:0.5em;
+    font-size: 1.5em;
+    outline:none;
+    border:none;
+    border-bottom:1px solid #9e9e9e;
+    background-color: transparent;
+    text-align: left;
+    transition-duration: 0.3s;
+}
+
+.taskInput:focus {
+    border-bottom: 1px solid #26a69a;
+    box-shadow: 0 1px 0 0 #26a69a;
+}
+
+.taskList {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    max-height: 50vh;
+    overflow:scroll;
+}
+
+.task:first-child {
+    width:50%;
+    padding:0.75em;
+    font-size:1em;
+    background-color:white;
+    border:1px solid lightgray;
+    text-align: left;
+}
+
+.task {
+    width:50%;
+    padding:0.75em;
+    font-size:1em;
+    background-color:white;
+    border-right:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    border-left:1px solid lightgray;
+    border-top:none;
+    text-align: left;
+}
+
+.task:hover {
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
+.noTasks {
+    color: #8a9eb2;
+    text-align: center;
+    font-weight: normal;
+    width:100vw;
+    margin:auto;
+}
+
+@media screen and (max-width: 768px) {
+    .taskInput {
+        width: 75%;
+    }
+    .task:first-child {
+        width:75%;
+    }
+    .task {
+        width:75%;
+    }
+    .taskInput {
+        position:fixed;
+        bottom:4em;
+    }
+    .taskList {
+        max-height: 50vh;
+        overflow:scroll;
+    }
+}
